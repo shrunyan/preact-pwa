@@ -1,0 +1,43 @@
+{
+  "name": "preact-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "pretty-quick --staged",
+    "dev": "NODE_ENV=development npx sane 'npm run build' src --wait=10 & npm run serve",
+    "serve": "npx serve dist",
+    "build": "npx rollup -c etc/config.rollup.js",
+    "deploy": "NODE_ENV=production npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "^8.4.2",
+    "preact-router": "^2.6.1",
+    "unistore": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "classnames": "^2.2.6",
+    "cypress": "^3.2.0",
+    "husky": "^2.2.0",
+    "less": "^3.9.0",
+    "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-copy": "^2.0.1",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-size-snapshot": "^0.8.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "sane": "^4.1.0",
+    "serve": "^11.0.0"
+  }
+}
