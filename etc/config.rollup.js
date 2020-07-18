@@ -12,7 +12,7 @@ console.log("Rollup ENV", process.env.NODE_ENV);
 module.exports = {
   input: "src/index.js",
   output: {
-    file: "dist/app.js",
+    file: "build/app.js",
     format: "iife"
   },
   plugins: [
@@ -34,12 +34,11 @@ module.exports = {
     }),
     copy({
       targets: [
-        "src/static/index.html",
-        "src/static/sw.js",
-        "src/static/manifest.json",
-        "src/static/images"
-      ],
-      outputFolder: "dist"
+        {src: "src/static/index.html", dest: "build"},
+        {src: "src/static/sw.js", dest: "build"},
+        {src: "src/static/manifest.json", dest: "build"},
+        {src: "src/static/images", dest: "build/images"}
+      ]
     }),
 
     sizeSnapshot(),

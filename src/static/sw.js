@@ -18,7 +18,7 @@ if (workbox) {
     // Use cache but update in the background.
     new workbox.strategies.StaleWhileRevalidate({
       // Use a custom cache name.
-      cacheName: "css-cache"
+      cacheName: "css-cache",
     })
   );
 
@@ -35,9 +35,9 @@ if (workbox) {
           // Cache only 20 images.
           maxEntries: 20,
           // Cache for a maximum of a week.
-          maxAgeSeconds: 7 * 24 * 60 * 60
-        })
-      ]
+          maxAgeSeconds: 7 * 24 * 60 * 60,
+        }),
+      ],
     })
   );
 } else {

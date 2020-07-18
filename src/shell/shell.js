@@ -16,7 +16,7 @@ export class Shell extends Component {
    *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
    *	@param {string} event.url	The newly routed URL
    */
-  handleRoute = e => {
+  handleRoute = (e) => {
     this.currentUrl = e.url;
   };
 
@@ -24,25 +24,25 @@ export class Shell extends Component {
     console.log("Shell:render", props, state, store);
     return (
       <section class={cx(style.Shell, "mdl-layout mdl-js-layout")}>
-        {/* <AppHeader />
+        <AppHeader />
         <div class="mdl-layout__drawer">
           <span class="mdl-layout-title">Title</span>
           <AppNav />
-        </div> */}
+        </div>
         <main class="mdl-layout__content">
           <Router onChange={this.handleRoute}>
             <Home path="/" />
             <Post path="/posts/:id" />
             <NotFound default />
           </Router>
-          {/* <button
+          <button
             class={cx(
               style.AddPost,
               "mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored"
             )}
           >
             <i class="material-icons">menu</i>
-          </button> */}
+          </button>
 
           {/* <!-- Right aligned menu below button --> */}
           <button

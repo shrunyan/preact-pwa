@@ -5,8 +5,8 @@ const initialState = {
   posts: [],
   user: {
     name: "stuart",
-    email: "shrunyan@gmail.com"
-  }
+    email: "shrunyan@gmail.com",
+  },
 };
 
 const store =
